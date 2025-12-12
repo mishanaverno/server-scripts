@@ -39,4 +39,3 @@ echo
 echo "Готово!"
 echo "Пользователь: $NEW_USER"
 echo "Пароль: $USER_PASS"
-echo "SSH root вход выключен."
