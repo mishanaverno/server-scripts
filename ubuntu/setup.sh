@@ -39,5 +39,7 @@ echo "HOST=$HOST"
 echo "NEW_SSH_PORT=$PORT"
 
 ssh -p 22 root@$HOST "
-  bash -c \"\$(wget -qO - https://raw.githubusercontent.com/mishanaverno/server-scripts/main/ubuntu/create_user.sh)\" -- $USER:$PASS
+  bash -c \"\$(wget -qO - https://raw.githubusercontent.com/mishanaverno/server-scripts/main/ubuntu/create_user.sh)\" -- $NAME:$PASS &&
+  bash -c \"\$(wget -qO - https://raw.githubusercontent.com/mishanaverno/server-scripts/main/ubuntu/discard_ssh.sh)\" -- $PORT &&
+  bash -c \"\$(wget -qO - https://raw.githubusercontent.com/mishanaverno/server-scripts/main/ubuntu/install_docker.sh)\"
 "
